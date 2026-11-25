@@ -1,0 +1,21 @@
+:root{--bg:#f2f5f7;--paper:#fff;--ink:#16252d;--mute:#5b6b74;--line:#dbe3e8;--accent:#0e6a86;--late:#b3261e;--soon:#9a5b00;--ok:#1d7447}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.top{display:flex;justify-content:space-between;align-items:center;padding:14px max(16px,calc((100vw - 880px)/2));background:var(--paper);border-bottom:1px solid var(--line)}
+.brand{font-weight:700;font-size:1.15rem;color:var(--accent);text-decoration:none;letter-spacing:-.01em}
+nav{display:flex;gap:18px}nav a{color:var(--mute);text-decoration:none}nav a:hover{color:var(--ink)}
+main{max-width:880px;margin:0 auto;padding:24px 16px 64px}
+h1{font-size:1.4rem;margin:0 0 8px}
+.summary{display:flex;gap:28px;flex-wrap:wrap;margin-bottom:20px}.summary p{margin:0;color:var(--mute)}.summary strong{font-size:1.6rem;color:var(--ink);margin-right:4px}.summary .late strong{color:var(--late)}
+.tabs{display:flex;gap:4px;margin-bottom:12px}.tabs a{padding:6px 14px;border-radius:999px;color:var(--mute);text-decoration:none}.tabs a.on{background:var(--ink);color:#fff}
+.cases{list-style:none;margin:0;padding:0;background:var(--paper);border:1px solid var(--line);border-radius:8px}
+.case{display:grid;grid-template-columns:1fr 170px auto;gap:12px;align-items:center;padding:14px 16px;border-top:1px solid var(--line);border-left:4px solid transparent}
+.case:first-child{border-top:0}.case.late{border-left-color:var(--late)}.case.soon{border-left-color:#d9a441}
+.main small{display:block;color:var(--mute)}.main span{color:var(--mute)}
+.due{display:flex;flex-direction:column}.due em{font-style:normal;font-size:.85rem}.late .due em{color:var(--late)}.soon .due em{color:var(--soon)}
+button{font:inherit;background:var(--accent);color:#fff;border:0;border-radius:6px;padding:8px 14px;cursor:pointer}
+button:hover{background:#0b566d}button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #7cc3d8;outline-offset:2px}
+.pill{font-size:.85rem;padding:3px 10px;border-radius:999px;background:#e3f2ea;color:var(--ok)}.pill.bad{background:#fbe5e3;color:var(--late)}
+.empty,.hint{color:var(--mute)}
+.mail{background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:10px 14px;margin-bottom:8px}.mail pre{white-space:pre-wrap;font:inherit;color:var(--mute);margin:10px 0 0}
+@media(max-width:640px){.case{grid-template-columns:1fr}}
